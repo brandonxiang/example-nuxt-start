@@ -5,7 +5,9 @@
   "author": "brandonxiang <1542453460@qq.com>",
   "private": true,
   "dependencies": {
-    "nuxt": "latest"
+    "element-ui": "^1.3.2",
+    "nuxt": "latest",
+    "vuedraggable": "^2.11.0"
   },
   "scripts": {
     "dev": "nuxt",

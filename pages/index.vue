@@ -1,59 +1,58 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        NUXT
-      </h1>
-      <h2 class="subtitle">
-        Universal Vue.js Application
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">Github</a>
-      </div>
-    </div>
-  </section>
+  <div id="app">
+    <care-header class="head"></care-header>
+    <care-content class="main"></care-content>
+  </div>
 </template>
 
 <script>
-import Logo from '~components/Logo.vue'
+import CareHeader from '~components/CareHeader';
+import CareContent from '~components/CareContent';
 
 export default {
   components: {
-    Logo
-  }
-}
+    CareHeader,
+    CareContent,
+  },
+};
 </script>
 
 <style>
-.container
-{
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+html,body{
+  margin:0;
+  padding:0;
+  background-color: #eeeeee;
+}
+
+.bg-gray{
+  background-color: #eeeeee;
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  color: #2c3e50;
+  margin: 0px;
 }
-.title
-{
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+
+.head{
+  height:75px;
 }
-.subtitle
-{
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+
+.main{
+  position:absolute;
+  top:75px;
+  bottom:0;
+  width: 100%;
 }
-.links
-{
-  padding-top: 15px;
+
+.small-font{
+  font-size:0.8rem;
+}
+
+.left-text{
+  text-align: left;
 }
 </style>
